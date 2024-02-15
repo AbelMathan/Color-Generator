@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import { useState } from 'react'
+import InputField from './components/InputField'
+import ColorBox from './components/ColorBox'
+const App = () => {
+  const [colorValue,setColorValue] = useState("")
+  const [hexValue,setHexValue] = useState("")
+  const [isDark,setIsDark]=useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <h1 className='header'>Color Generator</h1>
+      <ColorBox
+      colorValue={colorValue}
+      hexValue={hexValue}
+      isDark={isDark}
+      />
+      <InputField
+      colorValue={colorValue}
+      setColorValue={setColorValue}
+      hexValue={hexValue}
+      setHexValue={setHexValue}
+      isDark={isDark}
+      setIsDark={setIsDark}
+      />
+    </main>
+  )
 }
 
-export default App;
+export default App
