@@ -26,7 +26,7 @@ main {
   border: 2px black solid;
   display: grid;
   place-content: center;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 5px black;
   text-transform: capitalize;
   border-radius: 25px;
 }
