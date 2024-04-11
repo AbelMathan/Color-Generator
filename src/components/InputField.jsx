@@ -1,8 +1,14 @@
-import Color from 'color';
+import Color from "color";
 
-const InputField = ({ setColorValue, setHexValue, isDark, setIsDark, colorValue }) => {
+const InputField = ({
+  setColorValue,
+  setHexValue,
+  isDark,
+  setIsDark,
+  colorValue,
+}) => {
   return (
-    <section>
+    <section className="input-section">
       <form onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
@@ -20,7 +26,6 @@ const InputField = ({ setColorValue, setHexValue, isDark, setIsDark, colorValue 
             } catch (error) {
               setHexValue(null);
             }
-            
           }}
         />
         <br />
